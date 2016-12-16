@@ -1,0 +1,13 @@
+<div class="container-fluid main-content">
+    <div class="row" ng-repeat="rows in ctrl.chunkedMovies">
+        <div ng-repeat="movie in rows" class="col-sm-6 col-md-4" ng-class="$even?'col-md-offset-2':''">
+            <div class="thumbnail custom-thumbnail fade" ng-click="ctrl.goToDetails(movie.id)">
+                <img ng-if="movie.absoluteImageUrl" class="thumbnail-image custom-thumbnail-image" ng-src="{{movie.absoluteImageUrl}}" alt="{{movie.title}}" title="{{movie.title}}">
+                <div ng-if="!movie.absoluteImageUrl" class="no-image-poster align-center"><span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span></div>
+                <div class="caption align-center">
+                    <h3>{{movie.title}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

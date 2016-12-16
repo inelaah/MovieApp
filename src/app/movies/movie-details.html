@@ -1,0 +1,34 @@
+<div class="container-fluid main-content">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 back-button">
+            <button type="button" class="btn btn-default" ng-click="ctrl.GoBack()">
+                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+            </button>        
+        </div>             
+    </div>
+    
+    <div class="row align-center">
+        <div class="col-md-8 col-md-offset-2 fade">
+            <div ng-if="ctrl.movie.trailerUrl" class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" type="text/html" ng-src="{{ctrl.movie.trailerUrl | trusted}}" frameborder="0"></iframe>
+            </div>
+            <div ng-if="!ctrl.movie.trailerUrl">
+                    <img ng-if="ctrl.movie.absoluteImageUrl" ng-src="{{ctrl.movie.absoluteImageUrl}}" alt="{{ctrl.movie.title}}" />
+                    <div ng-if="!ctrl.movie.absoluteImageUrl" class="no-image-poster align-center"><span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></div>
+            </div>
+        </div>             
+    </div>
+
+     <div class="row">
+        <div class="col-md-8 col-md-offset-2 custom-title">
+            {{ctrl.movie.title}}
+        </div>             
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div>Movie Overview:</div>
+            <div>{{ctrl.movie.overview}}</div>
+        </div>             
+    </div>
+</div>

@@ -1,0 +1,40 @@
+{
+    "baseDirectory": "./dist/",
+    "destinationFolder": "dist",
+    "allTypescript": [
+       "./src/app/services/services.module.ts",
+        "./src/app/services/movie-mock.service.ts",
+        "./src/app/services/mapper.service.ts",
+        "./src/app/services/data-access.service.ts",
+        "./src/app/services/data-manipulation.service.ts",
+        "./src/app/app.module.ts",
+        "./src/app/app.config.ts",
+        "./src/app/app.routes.ts",
+        "./src/app/shared/app.filters.ts",
+        "./src/app/layout/navigation.controller.ts",
+        "./src/app/videos/video.domain.ts",
+        "./src/app/movies/movie.domain.ts",
+        "./src/app/movies/movies-page.domain.ts",
+        "./src/app/movies/movies.controller.ts",
+        "./src/app/movies/movie-details.controller.ts",
+        "./src/app/tv-shows/tv-show.domain.ts",
+        "./src/app/tv-shows/tv-shows-page.domain.ts",
+        "./src/app/tv-shows/tv-shows.controller.ts",
+        "./src/app/tv-shows/tv-show-details.controller.ts"
+    ],
+    "typescriptOut": "app.js",
+    "cssDestinationFolder": "./dist/css/",
+    "jsDestinationFolder": "./dist/js/",
+    "fontsDestinationFolder": "./dist/fonts/",
+    "allHtml": [	
+        "./src/*.html",
+		    "./src/app/**/*.html"
+    ],
+    "allCss": "./src/content/css/*.css",
+
+    "bowerCss": "**/*.css",
+    "bowerJs": ["**/*.js"],
+    "bowerFonts": "**/fonts/*.*",
+    "bowerCssOut": "vendor.css",
+    "bowerJsOut": "vendor.js"
+}

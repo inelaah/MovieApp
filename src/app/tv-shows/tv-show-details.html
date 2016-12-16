@@ -1,0 +1,34 @@
+<div class="container-fluid main-content">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 back-button">
+            <button type="button" class="btn btn-default" ng-click="ctrl.GoBack()">
+                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+            </button>        
+        </div>             
+    </div>
+    
+    <div class="row align-center">
+        <div class="col-md-8 col-md-offset-2 fade">
+            <div ng-if="ctrl.tvShow.trailerUrl" class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" type="text/html" ng-src="{{ctrl.tvShow.trailerUrl | trusted}}" frameborder="0"></iframe>
+            </div>
+            <div ng-if="!ctrl.tvShow.trailerUrl">
+                    <img ng-if="ctrl.tvShow.absoluteImageUrl" ng-src="{{ctrl.tvShow.absoluteImageUrl}}" alt="{{ctrl.tvShow.name}}" />
+                    <div ng-if="!ctrl.tvShow.absoluteImageUrl" class="no-image-poster align-center"><span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></div>
+            </div>
+        </div>             
+    </div>
+
+     <div class="row">
+        <div class="col-md-8 col-md-offset-2 custom-title">
+            {{ctrl.tvShow.name}}
+        </div>             
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div>Tv show Overview:</div>
+            <div>{{ctrl.tvShow.overview}}</div>
+        </div>             
+    </div>
+</div>
